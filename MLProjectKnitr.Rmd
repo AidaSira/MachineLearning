@@ -64,5 +64,6 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
 
 # Final comments #
 
-The model used was a random forest algorithm using 500 trees. Accuracy obtained was 99.9%. The random forest algorithm correctly identified 20 out of 20 test cases (100% accurate): B A B A A E D B A A B C B A E E A B B B
+The model used was a random forest algorithm using 500 trees. 
+The random forest algorithm correctly identified 20 out of 20 test cases (100% accurate): B A B A A E D B A A B C B A E E A B B B
 
