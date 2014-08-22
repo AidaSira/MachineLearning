@@ -1,7 +1,3 @@
----
-title: "Machine Learning Project"
-output: html_document
----
 
 # Sypnosis #
 
@@ -52,7 +48,7 @@ rf
 ```
 
 
-As we can see the ex[ected sample error rate is 0.01%
+As we can see the expected sample error rate is 0.01%
 
 
 # Model testing #
