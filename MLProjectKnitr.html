@@ -186,6 +186,8 @@ rf&lt;- randomForest(formula = classe ~ ., data = training)
 <pre><code>## Error: missing values in object
 </code></pre>
 
+<p>Inspect the model:</p>
+
 <pre><code class="r">rf
 </code></pre>
 
@@ -260,7 +262,7 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
   xlab(&quot;Real Value&quot;) +  ylab(&quot;Prediction&quot;) 
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
+<p><img src="figure/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
 
 <h1>Final comments</h1>
 

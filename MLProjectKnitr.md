@@ -47,6 +47,9 @@ rf<- randomForest(formula = classe ~ ., data = training)
 ## Error: missing values in object
 ```
 
+Inspect the model:
+
+
 ```r
 rf
 ```
@@ -68,6 +71,7 @@ rf
 ## D    0    0    0 2412    0   0.0000000
 ## E    0    0    0    0 2706   0.0000000
 ```
+
 
 As we can see the ex[ected sample error rate is 0.01%
 
@@ -128,7 +132,7 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
   xlab("Real Value") +  ylab("Prediction") 
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
 
 # Final comments #

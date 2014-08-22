@@ -33,13 +33,19 @@ The training data set was split up into one portion (75%) for model building (14
 
 Random forest has been the prediction algorithm used. 
 
-```{r}
+```{r,  results='hide'}
 inTrain<- createDataPartition(y=ml2$classe, p=0.75, list=FALSE) 
 training<-ml2[inTrain,] 
 testing<-ml2[-inTrain,]
 rf<- randomForest(formula = classe ~ ., data = training) 
+```
+
+Inspect the model:
+
+```{r}
 rf
 ```
+
 
 As we can see the ex[ected sample error rate is 0.01%
 
