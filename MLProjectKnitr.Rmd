@@ -38,11 +38,6 @@ inTrain<- createDataPartition(y=ml2$classe, p=0.75, list=FALSE)
 training<-ml2[inTrain,] 
 testing<-ml2[-inTrain,]
 rf<- randomForest(formula = classe ~ ., data = training) 
-```
-
-Inspect the model:
-
-```{r}
 rf
 ```
 

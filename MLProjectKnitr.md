@@ -47,29 +47,8 @@ rf<- randomForest(formula = classe ~ ., data = training)
 ## Error: missing values in object
 ```
 
-Inspect the model:
-
-
 ```r
 rf
-```
-
-```
-## 
-## Call:
-##  randomForest(formula = classe ~ ., data = training) 
-##                Type of random forest: classification
-##                      Number of trees: 500
-## No. of variables tried at each split: 6
-## 
-##         OOB estimate of  error rate: 0.01%
-## Confusion matrix:
-##      A    B    C    D    E class.error
-## A 4185    0    0    0    0   0.0000000
-## B    0 2848    0    0    0   0.0000000
-## C    0    1 2566    0    0   0.0003896
-## D    0    0    0 2412    0   0.0000000
-## E    0    0    0    0 2706   0.0000000
 ```
 
 
@@ -132,7 +111,7 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
   xlab("Real Value") +  ylab("Prediction") 
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
 
 # Final comments #

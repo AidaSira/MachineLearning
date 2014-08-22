@@ -186,26 +186,7 @@ rf&lt;- randomForest(formula = classe ~ ., data = training)
 <pre><code>## Error: missing values in object
 </code></pre>
 
-<p>Inspect the model:</p>
-
 <pre><code class="r">rf
-</code></pre>
-
-<pre><code>## 
-## Call:
-##  randomForest(formula = classe ~ ., data = training) 
-##                Type of random forest: classification
-##                      Number of trees: 500
-## No. of variables tried at each split: 6
-## 
-##         OOB estimate of  error rate: 0.01%
-## Confusion matrix:
-##      A    B    C    D    E class.error
-## A 4185    0    0    0    0   0.0000000
-## B    0 2848    0    0    0   0.0000000
-## C    0    1 2566    0    0   0.0003896
-## D    0    0    0 2412    0   0.0000000
-## E    0    0    0    0 2706   0.0000000
 </code></pre>
 
 <p>As we can see the ex[ected sample error rate is 0.01%</p>
@@ -262,7 +243,7 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
   xlab(&quot;Real Value&quot;) +  ylab(&quot;Prediction&quot;) 
 </code></pre>
 
-<p><img src="figure/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6"> </p>
+<p><img src="figure/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5"> </p>
 
 <h1>Final comments</h1>
 
