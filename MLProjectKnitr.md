@@ -47,6 +47,24 @@ rf<- randomForest(formula = classe ~ ., data = training)
 rf
 ```
 
+```
+## 
+## Call:
+##  randomForest(formula = classe ~ ., data = training) 
+##                Type of random forest: classification
+##                      Number of trees: 500
+## No. of variables tried at each split: 6
+## 
+##         OOB estimate of  error rate: 0.01%
+## Confusion matrix:
+##      A    B    C    D    E class.error
+## A 4185    0    0    0    0   0.0000000
+## B    0 2848    0    0    0   0.0000000
+## C    0    1 2566    0    0   0.0003896
+## D    0    0    0 2412    0   0.0000000
+## E    0    0    0    0 2706   0.0000000
+```
+
 
 As we can see the expected sample error rate is 0.01%
 
