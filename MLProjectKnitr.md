@@ -1,20 +1,14 @@
 
 # Sypnosis #
 
-The goal of this project is to use data from accelerometers on different parts of the bosy of 6 participants to predict how well they are doing a physical activity. 
+The goal of this project is to use data from accelerometers on different parts of the body of 6 participants to predict how well they are doing a physical activity. The partipants were asked to perform barbell lifts correctly and incorrectly in 5 different ways. 
 
-The partipants were asked to perform barbell lifts correctly and incorrectly in 5 different ways. Therefore, the data set consists of data from six different participants and the outcome is classified into five different categories, one category corresponds to doing the exercise correctly and four correspond to common mistakes. The main objective is to implement a classifier that correctly categorizes 20 samples provided as a testing set.
+Therefore, the data set consists of data from six different participants and the outcome is classified into five different categories, one category corresponds to doing the exercise correctly and four correspond to common mistakes. The main objective is to implement a classifier that correctly categorizes 20 samples provided as a testing set.
 
 # Data processing #
 
 The first step was loading the data
-
-```r
-ml   <- read.csv("pml-training.csv", header = T)
-```
-
 Once the data was loaded, I inspected it to understand its quality and identify possible improvements. There were several variables with mainly NA or no values. These variables were removed with the help of excel. Furthermore, since in the testing set there are only variables new_window equal to 'no', all 'yes' rows were deleted.
-You can also embed plots, for example:
 
 
 ```r
@@ -25,11 +19,9 @@ ml2<-ml[ml$new_window=='no',]
 
 # Model building #
 
-The first step was to divide the training set into ttraining and testing set. The training is large enough to achieve a  high accuracy, and the cross validation set is also large enough to give a good indication of the out of sample error.
+The first step was to divide the training set into training and testing set. The training is large enough to achieve a  high accuracy, and the cross validation set is also large enough to give a good indication of the out of sample error.
 
-The training data set was split up into one portion (75%) for model building (14718 observations) and another portion (25%) for cross-validation (4904 observations). The cross validation technique used was random sampling.
-
-Random forest has been the prediction algorithm used. 
+The training data set was split up into one portion (75%) for model building (14718 observations) and another portion (25%) for cross-validation (4904 observations). The cross validation technique used was random sampling and random forest has been the prediction algorithm. 
 
 
 ```r
@@ -71,8 +63,8 @@ As we can see the expected sample error rate is 0.01%
 
 # Model testing #
 
-Once I had built the random forest, I needed to test it on the previously created testing set. As we can see the random forest had a high accuracy.
-As we can see in the confussion matrix, we expect an accuracy of 100% with CI (99.92%- 100%). Therefore the estimated error with cross validation is 0 with confidence intervals of 0-0.08%
+Once I had built the random forest, I needed to test it on the previously created testing set. The random forest has a high accuracy.
+As wwe cna see, the confussion matrix, we expect an accuracy of 100% with CI (99.92%- 100%). Therefore the estimated error with cross validation is 0 with confidence intervals of 0-0.08%
 
 
 ```r
@@ -125,11 +117,11 @@ ggplot(matrix.table, aes(x=Reference, y=Prediction,alpha = Freq)) +
   xlab("Real Value") +  ylab("Prediction") 
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
 # Final comments #
 
 The model used was a random forest algorithm using 500 trees. 
-The random forest algorithm correctly identified 20 out of 20 test cases (100% accurate): B A B A A E D B A A B C B A E E A B B B
+The random forest algorithm correctly identified 20 out of 20 test cases in the final testing set (100% accurate): B A B A A E D B A A B C B A E E A B B B
 
